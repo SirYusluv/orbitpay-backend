@@ -77,6 +77,9 @@ const ValidateToken: RequestHandler = async (
   }
 };
 
+// check health
+app.get("/health", (_: Request, res: Response) => res.status(200).send());
+
 app.use("/auth", AuthRouter);
 app.use("/user", ValidateToken, UserRouter);
 app.use("/transaction", ValidateToken, TransactionRouter);
