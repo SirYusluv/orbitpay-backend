@@ -6,7 +6,7 @@
   "scripts": {
     "tsc-w": "tsc --watch",
     "start:dev": "nodemon ./app/app.js",
-    "build": "tsc",
+    "build": "npm i && tsc",
     "start": "node ./app/app.js"
   },
   "keywords": [],
